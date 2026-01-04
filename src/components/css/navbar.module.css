@@ -1,0 +1,145 @@
+:root {
+  --background-main: #0f0f0f;
+}
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0px 16px;
+  height: 56px;
+  align-items: center;
+  /* border-bottom: 1px solid red; */
+  position: fixed;
+  background-color: var(--background-main);
+  opacity: 100%;
+  width: 100%;
+}
+.block {
+  display: flex;
+  flex-direction: row;
+  color: white;
+  align-items: center;
+}
+.block i {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+}
+.logoWrapper {
+  padding: 10px 0px;
+  display: flex;
+  align-items: center;
+}
+.logo {
+  width: 120px;
+  display: block;
+}
+.right_navbar {
+  width: 150px;
+}
+.voice {
+  width: 50px;
+  margin-left: 10px;
+}
+
+.poisk {
+  width: 496px;
+}
+.poisk,
+.poisk:focus,
+.posi:active,
+.poisk:hover {
+  background-color: hsl(0, 0%, 7%);
+  border: 1px solid hsl(0, 0%, 18.82%);
+  border-radius: 40px 0 0 40px;
+  padding-left: 17px;
+  color: gainsboro;
+  outline: none;
+  box-shadow: none;
+}
+.poisk::placeholder {
+  color: gainsboro;
+}
+.poisk_btn {
+  background-color: hsla(0, 0%, 100%, 0.08);
+  width: 64px;
+  border: 1px solid hsl(0, 0%, 18.82%);
+  border-left: 0px;
+  border-radius: 0 40px 40px 0;
+  height: 38px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modalBackdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6) !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.modalContent {
+  background: rgb(0, 0, 0);
+  color: whitesmoke;
+  padding: 32px;
+  border: 2px solid whitesmoke;
+  border-radius: 10px;
+  min-width: 300px;
+  max-width: 90%;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.modalContent h2 {
+  text-align: center;
+  font-size: 18px;
+}
+.modal_buttonGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.modal_buttonGroup form {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+@media (max-width: 1200px) {
+  .poisk {
+    width: 300px;
+  }
+}
+@media (max-width: 767px) {
+  .poisk {
+    width: 100px;
+  }
+  .opener {
+    display: none !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .voice {
+    display: none;
+  }
+  .poisk {
+    width: 150px;
+  }
+  .block:last-child {
+    display: none;
+  }
+  .navbar {
+    padding: 0px 10px;
+  }
+}

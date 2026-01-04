@@ -1,0 +1,142 @@
+:root {
+  --background-main: #0f0f0f;
+}
+.sidebar {
+  margin-top: 56px;
+  width: 240px;
+  position: fixed;
+  background-color: var(--background-main);
+  height: 100%;
+  overflow-y: auto;
+  padding-bottom: 57px;
+}
+
+.sidebar::-webkit-scrollbar {
+  width: 0px;
+  transition: width 0.3s ease;
+}
+
+.sidebar:hover::-webkit-scrollbar {
+  width: 4px;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 6px;
+  visibility: hidden;
+  transition: visibility 0s linear 0.3s, background-color 0.3s ease; /* Задержка видимости */
+}
+
+.sidebar:hover::-webkit-scrollbar-thumb {
+  visibility: visible; /* Показываем при наведении */
+  transition-delay: 0s; /* Убираем задержку при появлении */
+}
+
+/* Стили ползунка при наведении курсором */
+.sidebar::-webkit-scrollbar-thumb:hover {
+  cursor: pointer;
+  background-color: #555;
+}
+
+/* Стили трека (фона за ползунком) */
+.sidebar::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.top_part,
+.block {
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+.top_part_part,
+.block_part {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+}
+.top_part_1 {
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+.btn {
+  display: flex;
+  width: 204px;
+  height: 40px;
+  align-items: center;
+  gap: 20px;
+  box-sizing: border-box;
+  padding: 0px 12px;
+  color: #f1f1f1;
+  border-radius: 8px;
+}
+.btn_active,
+.btn:hover {
+  transition: 0.1s;
+  background-color: rgb(50, 50, 50);
+}
+.btn img {
+  width: 30px;
+}
+.btn_special {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  font-size: 1rem;
+  font-weight: 600;
+}
+.btn_special img {
+  width: 22px;
+}
+.top_part_1_adaptive {
+  display: none;
+}
+
+@media (max-width: 1312px) {
+  .sidebar {
+    width: 72px;
+    padding: 0px 4px;
+  }
+  .top_part {
+    padding: 0px;
+    width: 100%;
+    border-bottom: none;
+  }
+  .top_part_1 {
+    border-bottom: none;
+    width: 100%;
+  }
+  .block {
+    display: none;
+  }
+  .top_part_part:last-child {
+    display: none;
+  }
+  .btn {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    padding: 16px 0 14px;
+    height: max-content;
+    width: 100%;
+    font-size: 12px;
+  }
+  .btn img {
+    width: 35px;
+  }
+  .btn_active {
+    background-color: transparent;
+  }
+  .top_part_1_adaptive {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 791px) {
+  .sidebar {
+    display: none;
+  }
+}

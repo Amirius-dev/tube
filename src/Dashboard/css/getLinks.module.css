@@ -1,0 +1,31 @@
+:root {
+  /* --background-main: #212121; */ /*chatgpt*/
+  --background-main: #0f0f0f;
+}
+body,
+html {
+  background-color: var(--background-main);
+}
+.all {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  height: 100% !important;
+}
+.main {
+  margin-top: 56px;
+  margin-left: 260px;
+  min-height: calc(100dvh - 56px);
+  padding-bottom: 12px;
+}
+@media (max-width: 1312px) {
+  .main {
+    margin-left: 96px;
+  }
+}
+@media (max-width: 791px) {
+  .main {
+    margin-left: 0px;
+    margin-bottom: 50.3px;
+  }
+}
