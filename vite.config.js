@@ -17,7 +17,7 @@ export default defineConfig({
         name: 'Tube',
         short_name: 'Tube',
         description: 'Персональный YouTube без прокрастинации',
-        start_url: '/youtube.com/', // то же, что base
+        start_url: '/', // то же, что base
         display: 'standalone',
         background_color: '#000000',
         theme_color: '#ff0000', // как у YouTube, или свой
