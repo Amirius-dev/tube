@@ -3,17 +3,21 @@ import react from '@vitejs/plugin-react'
 import { VitePWA } from 'vite-plugin-pwa'
 
 export default defineConfig({
-  base: '/my-youtube-pwa/',  // <--- ОБЯЗАТЕЛЬНО! Имя твоего репозитория с / в конце
+  base: process.env.NODE_ENV === 'production'
+    ? '/tube/'
+    : '/',  // <--- ОБЯЗАТЕЛЬНО! Имя твоего репозитория с / в конце
   plugins: [
     react(),
     VitePWA({
       registerType: 'autoUpdate',
-      devOptions: { enabled: true }, // чтобы в dev режиме тоже тестировать PWA
+      devOptions: {
+        enabled: false
+      },
       manifest: {
-        name: 'MyTube',
-        short_name: 'MyTube',
+        name: 'Tube',
+        short_name: 'Tube',
         description: 'Персональный YouTube без прокрастинации',
-        start_url: '/my-youtube-pwa/', // то же, что base
+        start_url: '/youtube.com/', // то же, что base
         display: 'standalone',
         background_color: '#000000',
         theme_color: '#ff0000', // как у YouTube, или свой
