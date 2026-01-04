@@ -18,12 +18,12 @@ function App() {
         <Route path="/accounts" element={<Accounts />} />
 
         {/* Основные страницы */}
-        <Route path="/youtube.com" element={<Videos />} />
+        <Route path="/" element={<Videos />} />
         <Route path="/video/:id" element={<Video />} />
         <Route path="/shorts" element={<Shorts />} />
 
         {/* Редирект на главную, если путь не найден */}
-        <Route path="*" element={<Navigate to="/youtube.com" replace />} />
+        <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </>
   );
